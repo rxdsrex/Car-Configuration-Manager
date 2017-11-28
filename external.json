@@ -1,0 +1,43 @@
+{"external" :
+
+    [
+{ "engine": [
+			{"manufacturer" : "abc" },
+			{"Origin" : "country" },
+			{"MFG model" : "xyz" },
+			{"valves per cylinder" : 2 },
+			{"Int HP" : "per SAE J245" },
+			{"KW Rating" : "someRating"},
+			{"Stroke" : 2},
+			{"engine type" : "Diesel Engine/Compression Ignition"},
+            {"fuel" : "disel"},
+            {"Hp/KW RPM" : "dada"},
+            {"engine configuration" : "V"},
+            {"number of cylinders" : 4},
+            {"crank plane" : "H"},
+            {"cycle" : 2},
+            {"cooling" : "oil"},
+            {"power" : 20},
+            {"torque" : "652"},
+            {"engine's displacement" : "asas"},
+            {"aspiration" : "turbocharged"},
+            {"intercooled" : "Water-air cooling"},
+            {"Fuel Dilvery" : "diesel injection diesel" },
+            {"length" : 252},
+            {"Width" : 22},
+            {"Weight" : 202},
+            {"intro" : 1990},
+            {"disc" : 2000},
+            {"licensor" : "asda"},
+            {"series" : "as2"},
+            {"bore" : 5},
+            {"equipment type" : "Inline pump"}
+            
+		]
+},
+{ "some other component" : "sdsd"
+
+}
+]
+}
+		

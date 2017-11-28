@@ -1,0 +1,28 @@
+{   HVAC SPECIFICATIONS
+
+1)Ambient Temperature : 110 F -Dry Bulb ----|
+                                                                        |-> with 125 F Entering the condensor
+                                          82 F - Wet Bulb ----|
+
+(1st parameter & 5th parameter are bit complex so alternatively we can consider below two parameters for simplicity)
+
+a)Outside Temperature
+b)Inside Temperature
+
+2)Solar Load : equivalent to 35 degree North latitude
+                        max solar heat rate
+
+3)Passenger Heat Load : 440 BTU/hr/person @ heat ratio 0.6
+//BTU- British Thermal Unit
+
+4)Number of passengers
+
+5)Maximum Infiltration(Fresh air) : 1575 cfm(Cubic Feet per minute)
+
+6)Other Heat Loads : Car lighting,electrical equipment,appliance loads
+
+7)Carbody Heat Transmission -  not less than 1200 BTU/hr-F
+
+8)Humidity
+
+For simplicity 1a,1b and 8 can be considered 
