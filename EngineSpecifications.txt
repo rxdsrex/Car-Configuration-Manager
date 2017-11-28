@@ -1,0 +1,98 @@
+  ENGINE SPECIFICATIONS
+
+1) Manufacturer
+
+2)Origin(Country)
+
+3)MFG Model -offical designation given by manufacturer 
+
+4)Valves per Cylinder - Total  number of intake and exhaust valves
+
+5)Int HP(Intermittent horsepower)  a)gasoline -->per SAE J245
+                                                         b)diesel --->per DIN6270-B
+
+6)KW Rating :Metric Conversion of Int HP 
+
+7)Stroke - piston stroke in mm
+
+8)Engine Type: (D)->Diesel Engine/Compression Ignition
+                         (G)->Gasoline Engine/Spark Ignition
+
+9)Fuel : (D) Diesel
+             (G)Gasoline
+             (N)Natural Gas
+             (L)LPG
+             (H)Heavy Fuel
+             (X)Dual Fuel
+             (V)Vegetable Oil
+             (Y)Hydrogen
+
+10)HP/KW RPM : Engine Crankshaft Speed @ which Int Hp is measured
+
+11)Configuration: (I)Inline Arrangements
+                             (V)Angular Vee Alignment
+                             (H)Horizontal Cylinders
+                             (W)Twin Vee Engines Together
+                             (R)Rotary Engines
+                             (C,)Integral Engine-compressors
+
+11)Cylinders :No of cylinders/engine
+
+12)Crank Plane: (V) Vertical shaft
+                          (H)Horizontal
+
+13)Cycle : No of piston strokes in combustion cycle
+
+14)Cooling : (A)Air
+                    (W)Water
+                    (O)Oil
+
+15)Power ->in Hp
+
+16)Torque->in Nm(Newton Meters)
+
+17)Displacement
+
+18)Engine's displacement (cc->cubic centimeters)
+
+19)Aspiration (T)Turbocharged ->powered by engine exhaust
+                       (S)Supercharged->by engine crankshaft
+                       (N)Naturally aspirated
+
+20)Intercooled -> (W) Water-air cooling
+                             (A) Air -air cooling
+                             (N) None
+
+21)Fuel Dilvery  (D)Diesel Injection Diesel
+                           (I)Indirect Diesel or Swril
+                           (C)Carbureted Gasoline
+                           (F)Gasoline Fuel Injection
+                            (G)Direct Gasoline Injection
+                            (P)Pressurized Natural & LPG Gas
+                            (B)Throttle Body Gasoline
+
+22)Length - Max axial lenght in mm
+
+23)Width - Max horizontal dimension in mm
+
+24)" - in kg
+
+25)Intro - year during which engine was first produced
+
+26)Disc - year during which engine was last produced
+
+27)Licensor - Organization granting the manufacturing rights
+
+28)Series - common family
+
+29) Bore - cylindewr bore in mm
+
+30)Equipment Type : specific fuel injection equipment 
+                                 (I)Inline pump
+                                 (R)Rotatory pump
+                                 (C)Unit Pump
+                                 (U)Mechanical Unit Injector
+                                 (E)Electronic Unit Injector
+                                 (H)Hydraulic Unit Injector
+                                 (O)Common Rail 
+        
