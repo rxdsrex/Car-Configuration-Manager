@@ -1,0 +1,57 @@
+{
+    "favoriteFruit": "strawberry",
+    "greeting": "Hello, Cross! You have 8 unread messages.",
+    "friends": [
+      {
+        "name": "Earline Delaney",
+        "id": 0
+      },
+      {
+        "name": "Ramos Durham",
+        "id": 1
+      },
+      {
+        "name": "Sargent Smith",
+        "id": 2
+      }
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "tags": [
+      "tempor",
+      "sit",
+      "irure",
+      "excepteur",
+      "tempor"
+    ],
+    "longitude": "151.19535",
+    "latitude": "-47.514416",
+    "registered": "Wednesday, January 7, 2015 5:40 PM",
+    "about": "Aliqua eiusmod non qui voluptate sunt. Proident pariatur ipsum aute dolor mollit in ea non est aute. Consequat eu consectetur laboris ipsum exercitation adipisicing et. Et do et officia excepteur aliqua laboris minim dolor. Consectetur adipisicing aliquip occaecat irure.",
+    "address": "870 Clay Street, Harleigh, Federated States Of Micronesia, 5396",
+    "phone": "+1 (901) 585-2745",
+    "email": "cross.shannon@fortean.com",
+    "company": "FORTEAN",
+    "name": {
+      "last": "Shannon",
+      "first": "Cross"
+    },
+    "eyeColor": "blue",
+    "age": 23,
+    "picture": "http://placehold.it/32x32",
+    "balance": "$3,535.40",
+    "isActive": true,
+    "guid": "a49e6931-2a76-44c1-bfcf-34215c7238cf",
+    "index": 0,
+    "_id": "5a1c93699ca9ac7427fbd087"
+  }

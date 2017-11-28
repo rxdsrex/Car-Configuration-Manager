@@ -2,7 +2,9 @@
 #define MYHEADER_H_INCLUDED
 
 #include "json.hpp"
-#include<iostream>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
 #include <unordered_map>
 
 using namespace std;
