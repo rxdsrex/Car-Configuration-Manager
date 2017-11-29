@@ -1,31 +1,69 @@
-{"Internal" :
-[
-{ "HVAC": [
-			{"outside temperature" : 60 },
-			{"cabin temperature" : 20 },
-			{"solar load" : 35 },
-			{"passanger heat Load" : 440 },
-			{"number of passengers" : 4 },
-			{"maximum infiltration" : 440},
-			{"other seat loads" : ["lighting","electrical equipment","appliences"] },
-			{"car body heat transmission" : 1200},
-			{"Humidity" : 222}
-		]
-},
-
 {
-	"Personal" : [
-					{"Driver seat position" :[{"height": 5},{"x orientation" : 20}]}, //search for appropriate word
-					{"EVM position" : [{"x": 20},{"y":20},{"z" : 25}]}, //edit
-					
-					{"infotainment" :[
-					{"dashboard theme" : "red"},
-					{"favourites" : [{"playlist" : ["plylist1","playlist2","playlist3"],"radio station" : ["station 1","station2"]}]},
-					{"widgets to show" : ["widget1","widget2","widget3","widget4"]} 
-					] 
-				}	 
-			] 
+	"Internal": [{
+			"HVAC": [{
+					"outside temperature": 60
+				},
+				{
+					"cabin temperature": 20
+				},
+				{
+					"solar load": 35
+				},
+				{
+					"passanger heat Load": 440
+				},
+				{
+					"number of passengers": 4
+				},
+				{
+					"maximum infiltration": 440
+				},
+				{
+					"other seat loads": ["lighting", "electrical equipment", "appliences"]
+				},
+				{
+					"car body heat transmission": 1200
+				},
+				{
+					"Humidity": 222
+				}
+			]
+		},
+
+		{
+			"Personal": [{
+					"Driver seat position": [{
+						"height": 5
+					}, {
+						"x orientation": 20
+					}]
+				},
+				{
+					"EVM position": [{
+						"x": 20
+					}, {
+						"y": 20
+					}, {
+						"z": 25
+					}]
+				},
+
+				{
+					"infotainment": [{
+							"dashboard theme": "red"
+						},
+						{
+							"favourites": [{
+								"playlist": ["plylist1", "playlist2", "playlist3"],
+								"radio station": ["station 1", "station2"]
+							}]
+						},
+						{
+							"widgets to show": ["widget1", "widget2", "widget3", "widget4"]
+						}
+					]
+				}
+			]
+		}
+	]
 }
-]
-}
-		

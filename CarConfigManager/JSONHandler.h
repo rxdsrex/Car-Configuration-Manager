@@ -10,18 +10,18 @@ using namespace std;
 
 using json = nlohmann::json;
 
+typedef unordered_map<string,json> jsonMap;
+
 class JSONHandler{
 private:
-    json j;
-    ifstream infile;
-    ofstream outfile;
+    json jsonData;
+    ifstream inFile;
+    ofstream outFile;
 public:
-    JSONHandler();
-    explicit JSONHandler(const JSONHandler&);
-    ~JSONHandler();
     json readFromFile(string);
     void writeToFile(json,string);
-    json mapToJSON(unordered_map<string, json>);
+    json mapToJSON(jsonMap);
+    ~JSONHandler();
 };
 
 
