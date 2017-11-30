@@ -1,5 +1,1 @@
-#include "JSONHandler.h"
-
-class ConfigManager {
-
-}
+#include "ConfigManager.h"

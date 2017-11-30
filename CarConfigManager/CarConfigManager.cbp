@@ -31,14 +31,48 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Body.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Body.h" />
+		<Unit filename="Cabin.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Cabin.h" />
+		<Unit filename="Chasis.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Chasis.h" />
 		<Unit filename="ConfigManager.cpp">
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="JSONHandler.cpp" />
+		<Unit filename="ConfigManager.h" />
+		<Unit filename="Drivetrain.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Drivetrain.h" />
+		<Unit filename="JSONHandler.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="JSONHandler.h" />
+		<Unit filename="Sensor.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Sensor.h" />
+		<Unit filename="Vehicle.cpp" />
+		<Unit filename="Vehicle.h" />
 		<Unit filename="json.hpp" />
-		<Unit filename="test.cpp" />
+		<Unit filename="test.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
