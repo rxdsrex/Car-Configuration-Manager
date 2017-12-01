@@ -66,10 +66,16 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="Sensor.h" />
-		<Unit filename="Vehicle.cpp" />
+		<Unit filename="Vehicle.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Vehicle.h" />
 		<Unit filename="json.hpp" />
-		<Unit filename="jsontest.cpp" />
+		<Unit filename="jsontest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="test.cpp">
 			<Option compile="0" />
 			<Option link="0" />

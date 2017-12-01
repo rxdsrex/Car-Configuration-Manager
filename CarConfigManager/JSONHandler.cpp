@@ -1,5 +1,15 @@
 #include "JSONHandler.h"
 
+JSONHandler::JSONHandler(string templateFile) {
+    inFile.open(templateFile);
+    if(inFile) {
+        inFile>>this->configTemplate;
+        inFile.close();
+    } else {
+        cout<<"can't open file";
+    }
+}
+
 json JSONHandler::readFromFile(string filename)
 {
     inFile.open(filename);
