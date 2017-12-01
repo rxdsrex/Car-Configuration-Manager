@@ -1,0 +1,198 @@
+{
+    "Vehicle": {
+        "description": "Attributes that identify a vehicle",
+        "children": {
+            "Model": {
+                "description": "Vehicle model",
+                "value": "",
+                "id": 101
+            },
+            "WMI": {
+                "description": "3-character World Manufacturer Identification (WMI) as defined by ISO 3780",
+                "value": "",
+                "id": 102
+            },
+            "VIN": {
+                "description": "17-character Vehicle Identification Number (VIN) as defined by ISO 3779",
+                "value": "",
+                "id": 103
+            },
+            "Brand": {
+                "description": "Vehicle brand or manufacturer",
+                "value": "",
+                "id": 104
+            },
+            "Year": {
+                "description": "Model year of the vehicle",
+                "value": 0,
+                "id": 105
+            }
+        }
+    },
+    "Cabin": {
+        "description": "In-cabin components, including doors.",
+        "children": {
+            "DoorCount": {
+                "description": "Number of doors in vehicle",
+                "value": 0,
+                "id": 201
+            },
+            "SteeringWheelPosition": {
+                "description": "Position of the steering wheel inside the cabin",
+                "value": "",
+                "hasEnum": true,
+                "enum": [
+                    "front_left",
+                    "front_right"
+                ],
+                "id": 202
+            }
+        },
+        "Chassis": {
+            "description": "All attributes concerning steering, suspension, wheels, and brakes.",
+            "children": {
+                "GrossWeight": {
+                    "description": "Curb weight of vehicle, including all liquids and full tank of fuel and full load of cargo and passengers.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "kg",
+                    "id": 301
+                },
+                "Wheelbase": {
+                    "description": "Overall wheel base, in mm.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "mm",
+                    "id": 302
+                },
+                "Height": {
+                    "description": "Overall vehicle height, in mm.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "mm",
+                    "id": 303
+                },
+                "Width": {
+                    "description": "Overall vehicle width, in mm.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "mm",
+                    "id": 304
+                },
+                "Length": {
+                    "description": "Overall vehicle length, in mm.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "mm",
+                    "id": 305
+                },
+                "CurbWeight": {
+                    "description": "Vehicle curb weight, in kg, including all liquids and full tank of fuel, but no cargo or passengers.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "kg",
+                    "id": 306
+                }
+            }
+        },
+        "Drivetrain": {
+            "description": "Drivetrain attributes internal combustion engines, transmissions, electric motors, etc.",
+            "children": {
+                "DriveType": {
+                    "description": "Drive type.",
+                    "value": "",
+                    "hasEnum": true,
+                    "enum": [
+                        "fwd",
+                        "rwd",
+                        "awd"
+                    ],
+                    "id": 401
+                },
+                "TransmissionType": {
+                    "description": "Transmission type.",
+                    "value": "",
+                    "hasEnum": true,
+                    "enum": [
+                        "sequential",
+                        "H",
+                        "automatic",
+                        "DSG",
+                        "CVT"
+                    ],
+                    "id": 402
+                },
+                "GearCount": {
+                    "description": "Number of forward gears in the transmission. -1 = CVT.",
+                    "value": 0,
+                    "id": 403
+                },
+                "FuelType": {
+                    "description": "Type of fuel that the engine runs on.",
+                    "value": "",
+                    "hasEnum": true,
+                    "enum": [
+                        "gasoline",
+                        "diesel",
+                        "E85",
+                        "CNG"
+                    ],
+                    "id": 404
+                },
+                "MaxTorque": {
+                    "description": "Peak power, in newton meter, that the engine can generate.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "Nm",
+                    "id": 405
+                },
+                "Displacement": {
+                    "description": "Displacement in cubic centimetres.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "CC",
+                    "id": 406
+                },
+                "MaxPower": {
+                    "description": "Peak power, in kilowatts, that engine can generate.",
+                    "value": 0,
+                    "hasUnit": true,
+                    "unit": "kW",
+                    "id": 407
+                }
+            }
+        },
+        "Body": {
+            "description": "Body components",
+            "children": {
+                "RefuelPosition": {
+                    "description": "Location of the fuel cap or charge port",
+                    "value": "",
+                    "hasEnum": true,
+                    "enum": [
+                        "front_left",
+                        "front_right",
+                        "middle_left",
+                        "middle_right",
+                        "rear_left",
+                        "rear_right"
+                    ],
+                    "id": 501
+                },
+                "BodyType": {
+                    "description": "Body type",
+                    "value": "",
+                    "hasEnum": true,
+                    "enum": [
+                        "Hatchback",
+                        "Sedan",
+                        "MUV/SUV",
+                        "Coupe",
+                        "Convertible"
+                    ],
+                    "id": 502
+                }
+            }
+        }
+    }
+}
