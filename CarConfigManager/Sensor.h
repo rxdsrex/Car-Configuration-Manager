@@ -3,11 +3,16 @@
 
 #include <iostream>
 #include "json.hpp"
+#include "Vehicle.h"
 
 using json = nlohmann::json;
 
-class Sensor{
+class Sensor : public Vehicle {
 
+    private:
+        json sensor;
+    public:
+        void addConfiguration();
 };
 
 #endif // SENSOR_H_INCLUDED

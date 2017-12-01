@@ -19,11 +19,12 @@ private:
     ifstream inFile;
     ofstream outFile;
 public:
-    JSONHandler(String);
+    JSONHandler();
+    JSONHandler(string);
     json readFromFile(string);
     void writeToFile(json,string);
     json mapToJSON(jsonMap);
-    ~JSONHandler();
+    virtual ~JSONHandler();
 };
 
 

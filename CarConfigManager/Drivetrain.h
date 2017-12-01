@@ -3,10 +3,16 @@
 
 #include <iostream>
 #include "json.hpp"
+#include "Vehicle.h"
 
 using json = nlohmann::json;
 
-class Drivetrain{
+class Drivetrain : public Vehicle {
+
+    private:
+        json drivetrain;
+    public:
+        void addConfiguration();
 
 };
 

@@ -2,20 +2,18 @@
 #define VEHICLE_H_INCLUDED
 
 #include <iostream>
+#include "JSONHandler.h"
 #include "json.hpp"
 
 using json = nlohmann::json;
 
-class Vehicle{
+class Vehicle : public JSONHandler {
 
 private:
     json vehicle;
 public:
-    Vehicle(int idArray[]) {
-        for(int id : idArray) {
-            this->vehicle[33] = value;
-        }
-    }
+    virtual void addConfiguration();
+
 };
 
 #endif // VEHICLE_H_INCLUDED

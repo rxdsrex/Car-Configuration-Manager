@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1512163265 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/ConfigManager.cpp
+	"ConfigManager.h"
+
+1512163046 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/ConfigManager.h
+	<iostream>
+	<cstdlib>
+	"JSONHandler.h"
+	"Vehicle.h"
+	"Body.h"
+	"Cabin.h"
+	"Chasis.h"
+	"Drivetrain.h"
+	"Sensor.h"
+
+1512163662 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/JSONHandler.h
+	"json.hpp"
+	<iostream>
+	<fstream>
+	<unordered_map>
+
+1512056911 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<cctype>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<forward_list>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+
+1512161720 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Body.h
+	<iostream>
+	"JSONHandler.h"
+	"json.hpp"
+	"Vehicle.h"
+
+1512161791 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Cabin.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512161784 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Chasis.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512161770 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Drivetrain.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512161748 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Sensor.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512163698 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/JSONHandler.cpp
+	"JSONHandler.h"
+
+1512161485 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Body.cpp
+	"Body.h"
+
+1512163834 /media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Vehicle.h
+	<iostream>
+	"JSONHandler.h"
+	"json.hpp"
+
+1512161567 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Cabin.cpp
+	"Cabin.h"
+
+1512163323 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Chasis.cpp
+	"Chasis.h"
+
+1512161437 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Vehicle.cpp
+	"Vehicle.h"
+
+1512163348 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Drivetrain.cpp
+	"Drivetrain.h"
+
+1512163366 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Sensor.cpp
+	"Sensor.h"
+

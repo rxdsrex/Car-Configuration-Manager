@@ -10,6 +10,10 @@ JSONHandler::JSONHandler(string templateFile) {
     }
 }
 
+JSONHandler::JSONHandler() {
+
+}
+
 json JSONHandler::readFromFile(string filename)
 {
     inFile.open(filename);
