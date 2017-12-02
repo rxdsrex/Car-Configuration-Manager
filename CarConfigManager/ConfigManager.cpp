@@ -31,17 +31,26 @@ void ConfigManager::addConfiguration() {
     system(clearScreen);
     cout<<"Enter the name of the vehicle: ";
     cin>>this->vehicleName;
+
     this->addMetadata(vehicleName);
     sleep_until(system_clock::now() + seconds(2));
+
+    configTemplate = this->readFromFile("configTemplate.json");
+
     system(clearScreen);
     this->vehicle = new Vehicle();
-    this->vehicle->addConfiguration();
+    configTemplate = this->vehicle->addConfiguration(configTemplate);
+    sleep_until(system_clock::now() + seconds(2));
 
-    //this->vehicle = new Body();
-    //this->vehicle->addConfiguration();
+    system(clearScreen);
+    this->vehicle = new Body();
+    configTemplate = this->vehicle->addConfiguration(configTemplate);
+    sleep_until(system_clock::now() + seconds(2));
 
-    //this->vehicle = new Cabin();
-    //this->vehicle->addConfiguration();
+    system(clearScreen);
+    this->vehicle = new Drivetrain();
+    configTemplate = this->vehicle->addConfiguration(configTemplate);
+    sleep_until(system_clock::now() + seconds(2));
 }
 
 

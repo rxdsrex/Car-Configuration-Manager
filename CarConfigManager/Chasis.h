@@ -12,7 +12,7 @@ class Chasis : public Vehicle {
     private:
         json chasis;
     public:
-        void addConfiguration();
+        json addConfiguration(json);
 
 };
 

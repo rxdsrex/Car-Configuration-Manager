@@ -23,7 +23,7 @@ private:
     int choice;
     string vehicleName;
     char clearScreen[4] = "cls";
-    json templateConfig;
+    json configTemplate;
     Vehicle *vehicle;
     Body vehicleBody;
     Cabin vehicleCabin;

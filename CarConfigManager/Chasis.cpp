@@ -1,6 +1,6 @@
 #include "Chasis.h"
 
-void Chasis::addConfiguration() {
+json Chasis::addConfiguration(json configTemplate) {
 
 cout<<"add config from Chasis\n";
 }

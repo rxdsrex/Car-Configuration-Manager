@@ -12,7 +12,7 @@ class Cabin : public Vehicle {
     private:
         json cabin;
     public:
-        void addConfiguration();
+        json addConfiguration(json);
 
 };
 

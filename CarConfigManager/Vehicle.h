@@ -2,19 +2,17 @@
 #define VEHICLE_H_INCLUDED
 
 #include <iostream>
-#include <unordered_map>
 #include "JSONHandler.h"
 #include "json.hpp"
 
+using namespace std;
 using json = nlohmann::json;
 
 class Vehicle {
-
 private:
-    json configTemplate;
+    json vehicleJSON;
 public:
-    virtual void addConfiguration();
-    json getConfigTemplate();
+    virtual json addConfiguration(json);
 };
 
 #endif // VEHICLE_H_INCLUDED

@@ -8,12 +8,10 @@
 using json = nlohmann::json;
 
 class Drivetrain : public Vehicle {
-
-    private:
-        json drivetrain;
-    public:
-        void addConfiguration();
-
+private:
+    json drivetrain;
+public:
+    json addConfiguration(json);
 };
 
 #endif // DRIVETRAIN_H_INCLUDED

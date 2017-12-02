@@ -7,9 +7,7 @@
 #include <unordered_map>
 
 using namespace std;
-
 using json = nlohmann::json;
-
 typedef unordered_map<string,json> jsonMap;
 
 class JSONHandler{

@@ -1,6 +1,6 @@
 #include "Cabin.h"
 
-void Cabin::addConfiguration() {
+json Cabin::addConfiguration(json configTemplate) {
 
 cout<<"add config from cabin\n";
 

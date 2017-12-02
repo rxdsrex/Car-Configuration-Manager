@@ -1,6 +1,31 @@
 #include "Body.h"
 
-void Body::addConfiguration() {
+json Body::addConfiguration(json configTemplate) {
+    int choice;
+    int i = 1;
+    json refuelOptions = configTemplate["Body"]["children"]["RefuelPosition"]["enum"];
+    json BodyOptions = configTemplate["Body"]["children"]["BodyType"]["enum"];
 
-cout<<"add config from Body\n";
+    cout<<"Description: "<<configTemplate["Body"]["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<configTemplate["Body"]["children"]["RefuelPosition"]["description"].get<string>()<<"\n";
+    for(string options : refuelOptions)
+        cout << i++ << ". " << options << '\n';
+    cout<<"Enter the position: ";
+    cin>>choice;
+    configTemplate["Body"]["children"]["RefuelPosition"]["value"] = refuelOptions[choice-1];
+
+    cout<<"\nDescription: "<<configTemplate["Body"]["children"]["BodyType"]["description"].get<string>()<<"\n";
+    i = 1;
+    for(string options : BodyOptions)
+        cout << i++ << ". " << options << '\n';
+    cout<<"Enter the type: ";
+    cin>>choice;
+    configTemplate["Body"]["children"]["BodyType"]["value"] = BodyOptions[choice-1];
+
+    cout<<"\n\Body configuration added.\n";
+    //cout<<setw(4)<<configTemplate["Body"]<<"\n";
+
+    return configTemplate;
+
 }
