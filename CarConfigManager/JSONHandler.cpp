@@ -36,12 +36,33 @@ void JSONHandler::writeToFile(json jsonData,string filename)
     }
 }
 
-json JSONHandler::mapToJSON(jsonMap mapData)
-{
+json JSONHandler::mapToJSON(jsonMap mapData) {
     for(auto i : mapData)
         jsonData[i.first]=i.second;
 
     return jsonData;
+}
+
+void JSONHandler::addMetadata(string carname) {
+    string folder = "configurations/";
+    string filelocation =  folder.append(carname + ".json");
+    ifstream metafile;
+    metafile.open("metadata.json");
+    metafile >> this->metadata;
+    this->metadata.emplace(carname , filelocation);
+    metafile.close();
+
+    ofstream configFile;
+    configFile.open(filelocation);
+    configFile << "{ }" << endl;
+    configFile.close();
+
+    ofstream joutFile;
+    joutFile.open("metadata.json");
+    joutFile << setw(4) << this->metadata << endl;
+    joutFile.close();
+
+    cout<<"Metadata added and configuration file initialized.";
 }
 
 JSONHandler::~JSONHandler()

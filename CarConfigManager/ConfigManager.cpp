@@ -1,15 +1,13 @@
 #include "ConfigManager.h"
 
 void ConfigManager::displayMainMenu() {
-
-    system("clear");
+    system("cls");
     cout<<"====== CONFIG MANAGER - MENU ======"<<"\n";
-    cout<<"1. Add Configuration"<<"\n";
+    cout<<"1. Add a Configuration"<<"\n";
     cout<<"2. View a configuration"<<"\n";
     cout<<"3. List all configurations"<<"\n";
     cout<<"4. Exit"<<"\n";
     cout<<"\nEnter a choice: ";
-
     cin>>choice;
 
     switch(choice) {
@@ -29,8 +27,12 @@ void ConfigManager::displayMainMenu() {
     }
 }
 
-void ConfigManager::addConfiguration()
-{
+void ConfigManager::addConfiguration() {
+    system("cls");
+    cout<<"Enter the name of the vehicle: ";
+    cin>>this->vehicleName;
+    this->addMetadata(vehicleName);
+
     this->vehicle = new Vehicle();
     this->vehicle->addConfiguration();
 

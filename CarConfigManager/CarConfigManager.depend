@@ -100,3 +100,104 @@
 1512163366 source:/media/sushant/Docs&Music/KPIT/Genesis/Case Study/carconfigmanager/CarConfigManager/Sensor.cpp
 	"Sensor.h"
 
+1512177336 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\body.cpp
+	"Body.h"
+
+1512177336 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\body.h
+	<iostream>
+	"JSONHandler.h"
+	"json.hpp"
+	"Vehicle.h"
+
+1512181596 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.h
+	"json.hpp"
+	<iostream>
+	<fstream>
+	<unordered_map>
+
+1511977628 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<cctype>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<forward_list>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+
+1512181369 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\vehicle.h
+	<iostream>
+	"JSONHandler.h"
+	"json.hpp"
+
+1512177336 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\cabin.cpp
+	"Cabin.h"
+
+1512177336 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\cabin.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512177336 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\chasis.cpp
+	"Chasis.h"
+
+1512177336 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\chasis.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512177336 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.cpp
+	"Drivetrain.h"
+
+1512177336 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512188527 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.cpp
+	"JSONHandler.h"
+
+1512177336 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\sensor.cpp
+	"Sensor.h"
+
+1512177336 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\sensor.h
+	<iostream>
+	"json.hpp"
+	"Vehicle.h"
+
+1512188721 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\vehicle.cpp
+	"Vehicle.h"
+
+1512188681 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.cpp
+	"ConfigManager.h"
+
+1512181402 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.h
+	<iostream>
+	<cstdlib>
+	"JSONHandler.h"
+	"Vehicle.h"
+	"Body.h"
+	"Cabin.h"
+	"Chasis.h"
+	"Drivetrain.h"
+	"Sensor.h"
+

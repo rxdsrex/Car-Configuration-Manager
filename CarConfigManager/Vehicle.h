@@ -7,7 +7,7 @@
 
 using json = nlohmann::json;
 
-class Vehicle : public JSONHandler {
+class Vehicle {
 
 private:
     json vehicle;

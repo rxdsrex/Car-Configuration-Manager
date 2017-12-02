@@ -8,6 +8,7 @@ int main()
         cout<<"2. From json file to map (STL)\n";
         cout<<"3. From json object to std::output\n";
         cout<<"4. From json object to file\n";
+        cout<<"5. Append json to an array\n";
         cout<<"Enter choice: ";
         cin>>choice;
         switch(choice){
@@ -101,6 +102,40 @@ int main()
                     };
                     ofstream open("pretty.json");
                     open << setw(4) << json_types << std::endl;
+            }
+            break;
+        case 5:
+            {
+                json null;
+                json null1;
+                string folder = "configurations/";
+                string file = "metadata";
+                string filelocation =  folder.append(file + ".json");
+                ifstream metafile;
+                metafile.open(filelocation);
+                metafile >> null;
+                null.emplace("CarName" , "filename");
+                null.emplace("CarName1" , "filename1");
+                metafile.close();
+
+                cout << null << endl;
+
+                ofstream jout;
+                jout.open(filelocation);
+                jout << setw(4) << null << std::endl;
+                jout.close();
+
+                metafile.open(filelocation);
+                metafile >> null1;
+                null1.emplace("CarName2" , "filename2");
+                null1.emplace("CarName3" , "filename3");
+                metafile.close();
+
+                cout << null1 << endl;
+
+                jout.open(filelocation);
+                jout << setw(4) << null1 << std::endl;
+                jout.close();
             }
             break;
         default:

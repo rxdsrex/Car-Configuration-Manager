@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1512184355 source:h:\casestudy\jsonboilerplate\carconfigmanager\boilerplate\myclass.cpp
+	"MyHeader.h"
+
+1512056652 h:\casestudy\jsonboilerplate\carconfigmanager\boilerplate\myheader.h
+	"json.hpp"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<unordered_map>
+
+1512056652 h:\casestudy\jsonboilerplate\carconfigmanager\boilerplate\json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<cctype>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<forward_list>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+

@@ -2,7 +2,7 @@
 #define CONFIGMANAGER_H_INCLUDED
 
 #include <iostream>
-#include<cstdlib>
+#include <cstdlib>
 #include "JSONHandler.h"
 #include "Vehicle.h"
 #include "Body.h"
@@ -15,10 +15,11 @@ using namespace std;
 
 using json = nlohmann::json;
 
-class ConfigManager {
+class ConfigManager:public JSONHandler{
 
 private:
     int choice;
+    string vehicleName;
     Vehicle *vehicle;
     Sensor vehicleSensor;
     Body vehicleBody;
