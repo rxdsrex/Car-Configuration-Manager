@@ -43,19 +43,9 @@
 		<Unit filename="Drivetrain.h" />
 		<Unit filename="JSONHandler.cpp" />
 		<Unit filename="JSONHandler.h" />
-		<Unit filename="Sensor.cpp" />
-		<Unit filename="Sensor.h" />
 		<Unit filename="Vehicle.cpp" />
 		<Unit filename="Vehicle.h" />
 		<Unit filename="json.hpp" />
-		<Unit filename="jsontest.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="test.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

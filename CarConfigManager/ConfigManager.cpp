@@ -1,7 +1,7 @@
 #include "ConfigManager.h"
 
 void ConfigManager::displayMainMenu() {
-    system("cls");
+    system(clearScreen);
     cout<<"====== CONFIG MANAGER - MENU ======"<<"\n";
     cout<<"1. Add a Configuration"<<"\n";
     cout<<"2. View a configuration"<<"\n";
@@ -28,19 +28,20 @@ void ConfigManager::displayMainMenu() {
 }
 
 void ConfigManager::addConfiguration() {
-    system("cls");
+    system(clearScreen);
     cout<<"Enter the name of the vehicle: ";
     cin>>this->vehicleName;
     this->addMetadata(vehicleName);
-
+    sleep_until(system_clock::now() + seconds(2));
+    system(clearScreen);
     this->vehicle = new Vehicle();
     this->vehicle->addConfiguration();
 
-    this->vehicle = new Body();
-    this->vehicle->addConfiguration();
+    //this->vehicle = new Body();
+    //this->vehicle->addConfiguration();
 
-    this->vehicle = new Cabin();
-    this->vehicle->addConfiguration();
+    //this->vehicle = new Cabin();
+    //this->vehicle->addConfiguration();
 }
 
 

@@ -14,8 +14,8 @@ JSONHandler::JSONHandler() {
 
 }
 
-json JSONHandler::readFromFile(string filename)
-{
+json JSONHandler::readFromFile(string filename) {
+    this->jsonData.clear();
     inFile.open(filename);
     if(inFile) {
         inFile>>this->jsonData;
@@ -62,7 +62,7 @@ void JSONHandler::addMetadata(string carname) {
     joutFile << setw(4) << this->metadata << endl;
     joutFile.close();
 
-    cout<<"Metadata added and configuration file initialized.";
+    cout<<"\n\nMetadata added and configuration file initialized.\n\n";
 }
 
 JSONHandler::~JSONHandler()

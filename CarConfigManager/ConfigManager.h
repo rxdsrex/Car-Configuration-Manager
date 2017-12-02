@@ -3,16 +3,18 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <chrono>
+#include <thread>
 #include "JSONHandler.h"
 #include "Vehicle.h"
 #include "Body.h"
 #include "Cabin.h"
 #include "Chasis.h"
 #include "Drivetrain.h"
-#include "Sensor.h"
 
 using namespace std;
-
+using namespace std::this_thread; // sleep_for, sleep_until
+using namespace std::chrono; // nanoseconds, system_clock, seconds
 using json = nlohmann::json;
 
 class ConfigManager:public JSONHandler{
@@ -20,8 +22,9 @@ class ConfigManager:public JSONHandler{
 private:
     int choice;
     string vehicleName;
+    char clearScreen[4] = "cls";
+    json templateConfig;
     Vehicle *vehicle;
-    Sensor vehicleSensor;
     Body vehicleBody;
     Cabin vehicleCabin;
     Chasis vehicleChasis;
