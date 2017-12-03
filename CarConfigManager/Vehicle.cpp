@@ -40,3 +40,7 @@ json Vehicle::addConfiguration(json configTemplate) {
 
     return configTemplate;
 }
+
+void Vehicle::viewConfiguration(json vehicleConfiguration) {
+    cout << setw(4) << vehicleConfiguration << endl;
+}

@@ -30,3 +30,7 @@ json Body::addConfiguration(json configTemplate) {
     return configTemplate;
 
 }
+
+void Body::viewConfiguration(json vehicleConfiguration) {
+    cout << setw(4) << vehicleConfiguration << endl;
+}

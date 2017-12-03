@@ -10,6 +10,7 @@ private:
     json drivetrain;
 public:
     json addConfiguration(json);
+    void viewConfiguration(json);
 };
 
 #endif // DRIVETRAIN_H_INCLUDED

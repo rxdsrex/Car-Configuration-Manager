@@ -10,6 +10,7 @@ private:
     json cabin;
 public:
     json addConfiguration(json);
+    void viewConfiguration(json);
 };
 
 #endif // CABIN_H_INCLUDED

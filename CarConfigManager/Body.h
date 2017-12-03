@@ -10,6 +10,7 @@ private:
     json bodyConfiguration;
 public:
     json addConfiguration(json);
+    void viewConfiguration(json);
 };
 
 #endif // BODY_H_INCLUDED

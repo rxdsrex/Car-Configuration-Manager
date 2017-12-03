@@ -126,6 +126,18 @@ int main()
                 metafile.close();
 
                 cout << null << endl;
+				
+				// currentConfiguration = vehicleAttributes[choice - 1];
+				// if(currentConfiguration == "Body")
+				// 	choice = 1;
+				// if(currentConfiguration == "Cabin")
+				// 	choice = 2;
+				// if(currentConfiguration == "Chassis")
+				// 	choice = 3;
+				// if(currentConfiguration == "Drivetrain")
+				// 	choice = 4;
+				// if(currentConfiguration == "Vehicle")
+				// 	choice = 5;
 
                 // ofstream jout;
                 // jout.open(filelocation);

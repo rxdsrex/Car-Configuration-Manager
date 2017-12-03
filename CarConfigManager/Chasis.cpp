@@ -46,3 +46,7 @@ json Chasis::addConfiguration(json configTemplate) {
 
     return configTemplate;
 }
+
+void Chasis::viewConfiguration(json vehicleConfiguration) {
+    cout << setw(4) << vehicleConfiguration << endl;
+}

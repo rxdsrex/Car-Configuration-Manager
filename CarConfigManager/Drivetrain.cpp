@@ -62,3 +62,7 @@ json Drivetrain::addConfiguration(json configTemplate) {
 
     return configTemplate;
 }
+
+void Drivetrain::viewConfiguration(json vehicleConfiguration) {
+    cout << setw(4) << vehicleConfiguration << endl;
+}

@@ -10,6 +10,7 @@ private:
     json chasis;
 public:
     json addConfiguration(json);
+    void viewConfiguration(json);
 };
 
 #endif // CHASIS_H_INCLUDED

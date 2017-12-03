@@ -26,3 +26,7 @@ json Cabin::addConfiguration(json configTemplate) {
 
     return configTemplate;
 }
+
+void Cabin::viewConfiguration(json vehicleConfiguration) {
+    cout << setw(4) << vehicleConfiguration << endl;
+}

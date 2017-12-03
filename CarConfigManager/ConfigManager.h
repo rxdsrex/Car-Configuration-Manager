@@ -20,11 +20,12 @@ using json = nlohmann::json;
 class ConfigManager:public JSONHandler{
 
 private:
-    int choice;
+    unsigned int choice;
     string vehicleName;
     char clearScreen[4] = "cls";
     string metadataFilename = "metadata.json";
     json configTemplate;
+    json vehicleConfiguration;
     json metadata;
     Vehicle *vehicle;
     Body vehicleBody;

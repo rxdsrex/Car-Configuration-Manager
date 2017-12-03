@@ -12,6 +12,7 @@ private:
     json vehicleJSON;
 public:
     virtual json addConfiguration(json);
+    virtual void viewConfiguration(json);
 };
 
 #endif // VEHICLE_H_INCLUDED
