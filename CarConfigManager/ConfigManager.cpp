@@ -56,6 +56,26 @@ void ConfigManager::addConfiguration() {
     this->vehicle = new Chasis();
     configTemplate = this->vehicle->addConfiguration(configTemplate);
     sleep_until(system_clock::now() + seconds(2));
+
+    system(clearScreen);
+    this->vehicle = new Cabin();
+    configTemplate = this->vehicle->addConfiguration(configTemplate);
+    sleep_until(system_clock::now() + seconds(2));
+
+    metadata = this->readFromFile(metadataFilename);
+    string fileLocation = metadata[vehicleName].get<string>();
+    bool configWrite = this->writeToFile(configTemplate,fileLocation);
+    if(configWrite) {
+        system(clearScreen);
+        cout<<"\n*****Configuration written to the JSON file*****\n";
+        sleep_until(system_clock::now() + seconds(2));
+    }
+    else {
+        system(clearScreen);
+        cout<<"\n-----Configuration could not be written-----\n";
+        sleep_until(system_clock::now() + seconds(2));
+    }
+    this->displayMainMenu();
 }
 
 

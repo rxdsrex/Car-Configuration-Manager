@@ -1,8 +1,6 @@
 #ifndef DRIVETRAIN_H_INCLUDED
 #define DRIVETRAIN_H_INCLUDED
 
-#include <iostream>
-#include "json.hpp"
 #include "Vehicle.h"
 
 using json = nlohmann::json;

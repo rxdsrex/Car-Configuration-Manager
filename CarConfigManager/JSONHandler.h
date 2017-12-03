@@ -12,7 +12,7 @@ typedef unordered_map<string,json> jsonMap;
 
 class JSONHandler{
 private:
-    json configTemplate;
+    json handlerJSON;
     json metadata;
     json jsonData;
     ifstream inFile;
@@ -21,7 +21,7 @@ public:
     JSONHandler();
     JSONHandler(string);
     json readFromFile(string);
-    void writeToFile(json,string);
+    bool writeToFile(json,string);
     json mapToJSON(jsonMap);
     void addMetadata(string);
     virtual ~JSONHandler();

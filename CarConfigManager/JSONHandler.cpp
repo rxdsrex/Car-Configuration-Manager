@@ -3,11 +3,12 @@
 JSONHandler::JSONHandler(string templateFile) {
     inFile.open(templateFile);
     if(inFile) {
-        inFile>>this->configTemplate;
+        inFile>>this->handlerJSON;
         inFile.close();
     } else {
-        cout<<"can't open file";
+        cout<<"Cannot open file";
     }
+    inFile.close();
 }
 
 JSONHandler::JSONHandler() {
@@ -20,26 +21,28 @@ json JSONHandler::readFromFile(string filename) {
     if(inFile) {
         inFile>>this->jsonData;
     } else {
-        cout<<"can't open file";
+        cout<<"Cannot open input file";
     }
+    inFile.close();
     return this->jsonData;
 }
 
 
-void JSONHandler::writeToFile(json jsonData,string filename)
-{
-    outFile.open(filename);
+bool JSONHandler::writeToFile(json jsonData,string fileLocation) {
+    outFile.open(fileLocation);
     if(outFile) {
-            outFile<<setw(4)<<jsonData<<endl;
-    } else {
-        cout<<"can't open output file";
+        outFile<<setw(4)<<jsonData<<endl;
+        return true;
     }
+    else {
+        return false;
+    }
+    outFile.close();
 }
 
 json JSONHandler::mapToJSON(jsonMap mapData) {
     for(auto i : mapData)
         jsonData[i.first]=i.second;
-
     return jsonData;
 }
 

@@ -23,7 +23,9 @@ private:
     int choice;
     string vehicleName;
     char clearScreen[4] = "cls";
+    string metadataFilename = "metadata.json";
     json configTemplate;
+    json metadata;
     Vehicle *vehicle;
     Body vehicleBody;
     Cabin vehicleCabin;

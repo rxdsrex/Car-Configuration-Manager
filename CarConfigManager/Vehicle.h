@@ -2,7 +2,6 @@
 #define VEHICLE_H_INCLUDED
 
 #include <iostream>
-#include "JSONHandler.h"
 #include "json.hpp"
 
 using namespace std;
