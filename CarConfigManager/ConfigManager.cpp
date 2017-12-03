@@ -2,7 +2,7 @@
 
 void ConfigManager::displayMainMenu() {
     system(clearScreen);
-    cout<<"====== CONFIG MANAGER - MENU ======"<<"\n";
+    cout<<"====== VEHICLE CONFIGURATION MANAGER - MENU ======"<<"\n";
     cout<<"1. Add a Configuration"<<"\n";
     cout<<"2. View a configuration"<<"\n";
     cout<<"3. List all configurations"<<"\n";
@@ -49,6 +49,11 @@ void ConfigManager::addConfiguration() {
 
     system(clearScreen);
     this->vehicle = new Drivetrain();
+    configTemplate = this->vehicle->addConfiguration(configTemplate);
+    sleep_until(system_clock::now() + seconds(2));
+
+    system(clearScreen);
+    this->vehicle = new Chasis();
     configTemplate = this->vehicle->addConfiguration(configTemplate);
     sleep_until(system_clock::now() + seconds(2));
 }

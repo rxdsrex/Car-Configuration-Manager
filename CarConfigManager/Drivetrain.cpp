@@ -11,6 +11,7 @@ json Drivetrain::addConfiguration(json configTemplate) {
     json TransmissionTypeOptions = configTemplate["Drivetrain"]["children"]["TransmissionType"]["enum"];
     json FuelTypeOptions = configTemplate["Drivetrain"]["children"]["FuelType"]["enum"];
 
+    cout<<"*****Drivetrain Configuration*****\n\n";
     cout<<"Description: "<<configTemplate["Drivetrain"]["description"].get<string>()<<"\n";
 
     cout<<"\nDescription: "<<configTemplate["Drivetrain"]["children"]["DriveType"]["description"].get<string>()<<"\n";
@@ -56,8 +57,8 @@ json Drivetrain::addConfiguration(json configTemplate) {
     cin>>maxPower;
     configTemplate["Drivetrain"]["children"]["MaxPower"]["value"] = maxPower;
 
-    cout<<"\n\Drivetrain configuration added.\n";
-    cout<<setw(4)<<configTemplate["Drivetrain"]<<"\n";
+    cout<<"\n\nDrivetrain configuration added.\n";
+    //cout<<setw(4)<<configTemplate["Drivetrain"]<<"\n";
 
     return configTemplate;
 }
