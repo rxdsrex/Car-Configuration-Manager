@@ -63,6 +63,30 @@ json Drivetrain::addConfiguration(json configTemplate) {
     return configTemplate;
 }
 
-void Drivetrain::viewConfiguration(json vehicleConfiguration) {
-    cout << setw(4) << vehicleConfiguration << endl;
+void Drivetrain::viewConfiguration(json drivetrainConfiguration) {
+    cout<<"*****Drivetrain Configuration*****\n\n";
+    cout<<"Description: "<<drivetrainConfiguration["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["DriveType"]["description"].get<string>()<<"\n";
+    cout<<"Drive Type: "<<drivetrainConfiguration["children"]["DriveType"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["TransmissionType"]["description"].get<string>()<<"\n";
+    cout<<"Transmission Type: "<<drivetrainConfiguration["children"]["TransmissionType"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["GearCount"]["description"].get<string>()<<"\n";
+    cout<<"Gear Count: "<<drivetrainConfiguration["children"]["GearCount"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["FuelType"]["description"].get<string>()<<"\n";
+    cout<<"Fuel Type: "<<drivetrainConfiguration["children"]["FuelType"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["MaxTorque"]["description"].get<string>()<<"\n";
+    cout<<"Max Torque: "<<drivetrainConfiguration["children"]["MaxTorque"]["value"].get<float>()<<"\n\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["Displacement"]["description"].get<string>()<<"\n";
+    cout<<"Displacement: "<<drivetrainConfiguration["children"]["Displacement"]["value"].get<float>()<<"\n\n";
+
+    cout<<"\nDescription: "<<drivetrainConfiguration["children"]["MaxPower"]["description"].get<string>()<<"\n";
+    cout<<"Max Power: "<<drivetrainConfiguration["children"]["MaxPower"]["value"].get<float>()<<"\n\n";
+    //cout << setw(4) << drivetrainConfiguration << endl;
+    system("pause");
 }

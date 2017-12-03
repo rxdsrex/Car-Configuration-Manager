@@ -31,6 +31,16 @@ json Body::addConfiguration(json configTemplate) {
 
 }
 
-void Body::viewConfiguration(json vehicleConfiguration) {
-    cout << setw(4) << vehicleConfiguration << endl;
+void Body::viewConfiguration(json bodyConfiguration) {
+    cout<<"*****Body Configuration*****\n\n";
+    cout<<"Description: "<<bodyConfiguration["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<bodyConfiguration["children"]["RefuelPosition"]["description"].get<string>()<<"\n";
+    cout<<"Refuel Position: "<<bodyConfiguration["children"]["RefuelPosition"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<bodyConfiguration["children"]["BodyType"]["description"].get<string>()<<"\n";
+    cout<<"BodyType: "<<bodyConfiguration["children"]["BodyType"]["value"].get<string>()<<"\n\n";
+
+    //cout << setw(4) << bodyConfiguration << endl;
+    system("pause");
 }

@@ -42,5 +42,23 @@ json Vehicle::addConfiguration(json configTemplate) {
 }
 
 void Vehicle::viewConfiguration(json vehicleConfiguration) {
-    cout << setw(4) << vehicleConfiguration << endl;
+    cout<<"*****Vehicle Configuration*****\n\n";
+    cout<<"Description: "<<vehicleConfiguration["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<vehicleConfiguration["children"]["WMI"]["description"].get<string>()<<"\n";
+    cout<<"WMI: "<<vehicleConfiguration["children"]["WMI"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<vehicleConfiguration["children"]["Brand"]["description"].get<string>()<<"\n";
+    cout<<"Brand: "<<vehicleConfiguration["children"]["Brand"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<vehicleConfiguration["children"]["Model"]["description"].get<string>()<<"\n";
+    cout<<"Model: "<<vehicleConfiguration["children"]["Model"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<vehicleConfiguration["children"]["VIN"]["description"].get<string>()<<"\n";
+    cout<<"VIN: "<<vehicleConfiguration["children"]["VIN"]["value"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<vehicleConfiguration["children"]["Year"]["description"].get<string>()<<"\n";
+    cout<<"Year: "<<vehicleConfiguration["children"]["Year"]["value"].get<int>()<<"\n\n";
+    //cout << setw(4) << vehicleConfiguration << endl;
+    system("pause");
 }

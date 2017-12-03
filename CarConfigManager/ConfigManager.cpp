@@ -133,7 +133,6 @@ void ConfigManager::viewConfiguration(){
                 this->vehicle = new Body();
                 json bodyJSON = vehicleConfiguration["Body"];
                 this->vehicle->viewConfiguration(bodyJSON);
-                sleep_until(system_clock::now() + seconds(5));
             }
                 break;
             case 2:
@@ -142,7 +141,6 @@ void ConfigManager::viewConfiguration(){
                 this->vehicle = new Cabin();
                 json cabinJSON = vehicleConfiguration["Cabin"];
                 this->vehicle->viewConfiguration(cabinJSON);
-                sleep_until(system_clock::now() + seconds(5));
             }
                 break;
             case 3:
@@ -151,7 +149,6 @@ void ConfigManager::viewConfiguration(){
                 this->vehicle = new Chasis();
                 json chassisJSON = vehicleConfiguration["Chassis"];
                 this->vehicle->viewConfiguration(chassisJSON);
-                sleep_until(system_clock::now() + seconds(5));
             }
                 break;
             case 4:
@@ -160,7 +157,6 @@ void ConfigManager::viewConfiguration(){
                 this->vehicle = new Drivetrain();
                 json drivetrainJSON = vehicleConfiguration["Drivetrain"];
                 this->vehicle->viewConfiguration(drivetrainJSON);
-                sleep_until(system_clock::now() + seconds(5));
             }
                 break;
             case 5:
@@ -169,7 +165,6 @@ void ConfigManager::viewConfiguration(){
                 this->vehicle = new Vehicle();
                 json vehicleJSON = vehicleConfiguration["Vehicle"];
                 this->vehicle->viewConfiguration(vehicleJSON);
-                sleep_until(system_clock::now() + seconds(5));
             }
                 break;
             case 6:

@@ -27,6 +27,16 @@ json Cabin::addConfiguration(json configTemplate) {
     return configTemplate;
 }
 
-void Cabin::viewConfiguration(json vehicleConfiguration) {
-    cout << setw(4) << vehicleConfiguration << endl;
+void Cabin::viewConfiguration(json cabinConfiguration) {
+    cout<<"*****Cabin Configuration*****\n\n";
+    cout<<"Description: "<<cabinConfiguration["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<cabinConfiguration["children"]["DoorCount"]["description"].get<string>()<<"\n";
+    cout<<"Door Count: "<<cabinConfiguration["children"]["DoorCount"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<cabinConfiguration["children"]["SteeringWheelPosition"]["description"].get<string>()<<"\n";
+    cout<<"Steering Wheel Position: "<<cabinConfiguration["children"]["SteeringWheelPosition"]["value"].get<string>()<<"\n\n";
+
+    //cout << setw(4) << cabinConfiguration << endl;
+    system("pause");
 }

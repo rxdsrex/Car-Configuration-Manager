@@ -47,6 +47,28 @@ json Chasis::addConfiguration(json configTemplate) {
     return configTemplate;
 }
 
-void Chasis::viewConfiguration(json vehicleConfiguration) {
-    cout << setw(4) << vehicleConfiguration << endl;
+void Chasis::viewConfiguration(json chassisConfiguration) {
+    cout<<"*****Chassis Configuration*****\n\n";
+    cout<<"Description: "<<chassisConfiguration["description"].get<string>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["GrossWeight"]["description"].get<string>()<<"\n";
+    cout<<"Gross Weight: "<<chassisConfiguration["children"]["GrossWeight"]["value"].get<float>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["Wheelbase"]["description"].get<string>()<<"\n";
+    cout<<"Wheelbase: "<<chassisConfiguration["children"]["Wheelbase"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["Height"]["description"].get<string>()<<"\n";
+    cout<<"Height: "<<chassisConfiguration["children"]["Height"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["Width"]["description"].get<string>()<<"\n";
+    cout<<"Width: "<<chassisConfiguration["children"]["Width"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["Length"]["description"].get<string>()<<"\n";
+    cout<<"Length: "<<chassisConfiguration["children"]["Length"]["value"].get<int>()<<"\n";
+
+    cout<<"\nDescription: "<<chassisConfiguration["children"]["CurbWeight"]["description"].get<string>()<<"\n";
+    cout<<"Curb Weight: "<<chassisConfiguration["children"]["CurbWeight"]["value"].get<float>()<<"\n\n";
+
+    //cout << setw(4) << chassisConfiguration << endl;
+    system("pause");
 }
