@@ -11,6 +11,8 @@ int main()
         cout<<"5. Append json to an array\n";
         cout<<"Enter choice: ";
         cin>>choice;
+        json j_object;
+        j_object = {{"one", 1}, {"two", 2}};
         switch(choice){
         case 1:
             {
@@ -114,28 +116,33 @@ int main()
                 ifstream metafile;
                 metafile.open(filelocation);
                 metafile >> null;
-                null.emplace("CarName" , "filename");
-                null.emplace("CarName1" , "filename1");
+                auto now = chrono::system_clock::now();
+                time_t toTime = std::chrono::system_clock::to_time_t(now);
+				string time = (string)ctime(&toTime);
+
+
+                //json car = {"carname": {"name": "carname","location": filelocation, "Last modified": time}};
+                null.emplace(j_object);
                 metafile.close();
 
                 cout << null << endl;
 
-                ofstream jout;
-                jout.open(filelocation);
-                jout << setw(4) << null << std::endl;
-                jout.close();
+                // ofstream jout;
+                // jout.open(filelocation);
+                // jout << setw(4) << null << std::endl;
+                // jout.close();
 
-                metafile.open(filelocation);
-                metafile >> null1;
-                null1.emplace("CarName2" , "filename2");
-                null1.emplace("CarName3" , "filename3");
-                metafile.close();
+                // metafile.open(filelocation);
+                // metafile >> null1;
+                // null1.emplace("CarName2" , "filename2");
+                // null1.emplace("CarName3" , "filename3");
+                // metafile.close();
 
-                cout << null1 << endl;
+                // cout << null1 << endl;
 
-                jout.open(filelocation);
-                jout << setw(4) << null1 << std::endl;
-                jout.close();
+                // jout.open(filelocation);
+                // jout << setw(4) << null1 << std::endl;
+                // jout.close();
             }
             break;
         default:

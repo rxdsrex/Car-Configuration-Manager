@@ -31,10 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="MyClass.cpp" />
+		<Unit filename="MyClass.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="MyHeader.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="asd.cpp" />
 		<Unit filename="json.hpp" />
 		<Extensions>
 			<code_completion />

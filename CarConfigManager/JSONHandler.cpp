@@ -49,10 +49,24 @@ json JSONHandler::mapToJSON(jsonMap mapData) {
 void JSONHandler::addMetadata(string carname) {
     string folder = "configurations/";
     string filelocation =  folder.append(carname + ".json");
-    ifstream metafile;
-    metafile.open("metadata.json");
+    ifstream checkfile("metadata.json");
+    if(!checkfile){
+        checkfile.close();
+        ofstream metaoutfile;
+        metaoutfile.open("metadata.json");
+        metaoutfile << "{\"CarList\":[]}" << endl;
+        metaoutfile.close();
+    }
+    ifstream metafile("metadata.json");
     metafile >> this->metadata;
-    this->metadata.emplace(carname , filelocation);
+    auto now = chrono::system_clock::now();
+    time_t toTime = std::chrono::system_clock::to_time_t(now);
+	string time = (string)ctime(&toTime);
+	json attributes;
+	attributes.emplace("Location",filelocation);
+    attributes.emplace("Last modified",time);
+	this->metadata.emplace(carname,attributes);
+    this->metadata["CarList"].emplace_back(carname);
     metafile.close();
 
     ofstream configFile;

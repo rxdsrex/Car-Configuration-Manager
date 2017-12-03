@@ -7,23 +7,23 @@ void ConfigManager::displayMainMenu() {
     cout<<"2. View a configuration"<<"\n";
     cout<<"3. List all configurations"<<"\n";
     cout<<"4. Exit"<<"\n";
+
     cout<<"\nEnter a choice: ";
     cin>>choice;
 
     switch(choice) {
-
     case 1:
-                this->addConfiguration();
-    case 2:
-//            viewConfiguration();
-            break;
-    case 3:
-//        listAllConfigurations();
+        this->addConfiguration();
         break;
-
+    case 2:
+        //this->viewConfiguration();
+        break;
+    case 3:
+        //this->listAllConfigurations();
+        break;
     default:
-            cout<<"Invalid Choice\n";
-            break;
+        cout<<"Invalid Choice\n";
+        break;
     }
 }
 
@@ -63,7 +63,7 @@ void ConfigManager::addConfiguration() {
     sleep_until(system_clock::now() + seconds(2));
 
     metadata = this->readFromFile(metadataFilename);
-    string fileLocation = metadata[vehicleName].get<string>();
+    string fileLocation = metadata[vehicleName]["Location"].get<string>();
     bool configWrite = this->writeToFile(configTemplate,fileLocation);
     if(configWrite) {
         system(clearScreen);
@@ -80,7 +80,6 @@ void ConfigManager::addConfiguration() {
 
 
 int main() {
-
     ConfigManager carCofigManager;
     carCofigManager.displayMainMenu();
     return 0;

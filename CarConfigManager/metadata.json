@@ -1,3 +1,14 @@
 {
-
+    "CarList": [
+        "accord",
+        "city"
+    ],
+    "accord": {
+        "Last modified": "Sun Dec 03 10:55:05 2017\n",
+        "Location": "configurations/accord.json"
+    },
+    "city": {
+        "Last modified": "Sun Dec 03 11:08:07 2017\n",
+        "Location": "configurations/city.json"
+    }
 }

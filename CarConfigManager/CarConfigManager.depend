@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1512261958 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\cabin.cpp
+1512264436 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\cabin.cpp
 	"Cabin.h"
 
 1512261417 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\cabin.h
@@ -38,10 +38,12 @@
 	<iostream>
 	"json.hpp"
 
-1512218874 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.h
+1512275374 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.h
 	"json.hpp"
 	<iostream>
 	<fstream>
+	<chrono>
+	<ctime>
 	<unordered_map>
 
 1512259676 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\chasis.cpp
@@ -50,10 +52,10 @@
 1512261322 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\chasis.h
 	"Vehicle.h"
 
-1512219331 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.cpp
+1512277578 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.cpp
 	"ConfigManager.h"
 
-1512210971 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.h
+1512264221 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\configmanager.h
 	<iostream>
 	<cstdlib>
 	<chrono>
@@ -68,18 +70,16 @@
 1512261438 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\body.h
 	"Vehicle.h"
 
-1512219722 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.h
-	<iostream>
-	"json.hpp"
+1512261308 h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.h
 	"Vehicle.h"
 
-1512211224 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.cpp
+1512259615 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\drivetrain.cpp
 	"Drivetrain.h"
 
-1512204787 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.cpp
+1512278669 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\jsonhandler.cpp
 	"JSONHandler.h"
 
-1512211702 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\vehicle.cpp
+1512259822 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\vehicle.cpp
 	"Vehicle.h"
 
 1512259605 source:h:\casestudy\jsonboilerplate\carconfigmanager\carconfigmanager\body.cpp
