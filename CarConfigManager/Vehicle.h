@@ -2,17 +2,17 @@
 #define VEHICLE_H_INCLUDED
 
 #include <iostream>
+#include <cstdlib>
 #include "json.hpp"
 
 using namespace std;
 using json = nlohmann::json;
 
 class Vehicle {
-private:
-    json vehicleJSON;
 public:
     virtual json addConfiguration(json);
     virtual void viewConfiguration(json);
+    virtual json editConfiguration(json);
 };
 
 #endif // VEHICLE_H_INCLUDED

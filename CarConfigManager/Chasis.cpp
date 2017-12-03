@@ -72,3 +72,44 @@ void Chasis::viewConfiguration(json chassisConfiguration) {
     //cout << setw(4) << chassisConfiguration << endl;
     system("pause");
 }
+
+json Chasis::editConfiguration(json chassisConfiguration) {
+    int i;
+    int flag = 1;
+    string exit;
+    string editName;
+    int intData;
+    float floatData;
+    int choice;
+    json chassisAttributes;
+    for (auto it = chassisConfiguration["children"].begin(); it != chassisConfiguration["children"].end(); ++it)
+        chassisAttributes.emplace_back(string(it.key()));
+    do {
+        system("cls");
+        cout << "*****Edit Chassis Configuration*****\n\n";
+        cout << "Current values:\n";
+        i = 1;
+        for(string options : chassisAttributes){
+            cout << i++ << ". " << options << ": "<<chassisConfiguration["children"][options]["value"] << "\n";
+        }
+        cout << "Choose an option: ";
+        cin>>choice;
+        editName = chassisAttributes[choice-1];
+        cout << "Enter the new value: ";
+        if(chassisConfiguration["children"][editName]["value"].is_number_integer()) {
+            cin >> intData;
+            chassisConfiguration["children"][editName]["value"] = intData;
+            cout << "\nValue changed\n";
+        }
+        else if(chassisConfiguration["children"][editName]["value"].is_number_float()) {
+            cin >> floatData;
+            chassisConfiguration["children"][editName]["value"] = floatData;
+            cout << "\nValue changed\n";
+        }
+        cout<<"Enter x and return key to exit.. ";
+        cin>>exit;
+        if(exit == "x")
+            flag = 0;
+    }while(flag);
+    return chassisConfiguration;
+}

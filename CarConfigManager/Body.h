@@ -11,6 +11,7 @@ private:
 public:
     json addConfiguration(json);
     void viewConfiguration(json);
+    json editConfiguration(json);
 };
 
 #endif // BODY_H_INCLUDED

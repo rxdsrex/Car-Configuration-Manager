@@ -32,12 +32,13 @@ bool JSONHandler::writeToFile(json jsonData,string fileLocation) {
     outFile.open(fileLocation);
     if(outFile) {
         outFile<<setw(4)<<jsonData<<endl;
+        outFile.close();
         return true;
     }
     else {
+        outFile.close();
         return false;
     }
-    outFile.close();
 }
 
 json JSONHandler::mapToJSON(jsonMap mapData) {
@@ -80,6 +81,31 @@ void JSONHandler::addMetadata(string carname) {
     joutFile.close();
 
     cout<<"\n\nMetadata added and configuration file initialized.\n\n";
+}
+
+bool JSONHandler::editToFile(json data,string fileLocation,string objectName){
+    this->jsonData.clear();
+    inFile.open(fileLocation);
+    if(inFile) {
+        inFile>>this->jsonData;
+    } else {
+        cout<<"Cannot open input file";
+    }
+    inFile.close();
+
+    this->jsonData.erase(this->jsonData.find(objectName));
+    this->jsonData.emplace(objectName,data);
+
+    outFile.open(fileLocation);
+    if(outFile) {
+        outFile<<setw(4)<<this->jsonData<<endl;
+        outFile.close();
+        return true;
+    }
+    else {
+        outFile.close();
+        return false;
+    }
 }
 
 JSONHandler::~JSONHandler()

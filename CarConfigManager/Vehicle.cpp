@@ -62,3 +62,44 @@ void Vehicle::viewConfiguration(json vehicleConfiguration) {
     //cout << setw(4) << vehicleConfiguration << endl;
     system("pause");
 }
+
+json Vehicle::editConfiguration(json vehicleConfiguration) {
+    int i;
+    int flag = 1;
+    string exit;
+    string editName;
+    int intData;
+    string stringData;
+    int choice;
+    json vehicleAttributes;
+    for (auto it = vehicleConfiguration["children"].begin(); it != vehicleConfiguration["children"].end(); ++it)
+        vehicleAttributes.emplace_back(string(it.key()));
+    do {
+        system("cls");
+        cout << "*****Edit Vehicle Configuration*****\n\n";
+        cout << "Current values:\n";
+        i = 1;
+        for(string options : vehicleAttributes){
+            cout << i++ << ". " << options << ": "<<vehicleConfiguration["children"][options]["value"] << "\n";
+        }
+        cout << "Choose a option: ";
+        cin>>choice;
+        editName = vehicleAttributes[choice-1];
+        cout << "Enter the new value: ";
+        if(vehicleConfiguration["children"][editName]["value"].is_number_integer()) {
+            cin >> intData;
+            vehicleConfiguration["children"][editName]["value"] = intData;
+            cout << "\nValue changed\n";
+        }
+        else if(vehicleConfiguration["children"][editName]["value"].is_string()) {
+            cin >> stringData;
+            vehicleConfiguration["children"][editName]["value"] = stringData;
+            cout << "\nValue changed\n";
+        }
+        cout<<"Enter x and return key to exit.. ";
+        cin>>exit;
+        if(exit == "x")
+            flag = 0;
+    }while(flag);
+    return vehicleConfiguration;
+}

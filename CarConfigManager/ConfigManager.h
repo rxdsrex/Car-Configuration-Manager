@@ -37,7 +37,7 @@ public:
     void displayMainMenu();
     void addConfiguration();
     void viewConfiguration();
-    void listAllConfigurations();
+    void editConfiguration();
 };
 
 

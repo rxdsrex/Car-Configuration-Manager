@@ -90,3 +90,64 @@ void Drivetrain::viewConfiguration(json drivetrainConfiguration) {
     //cout << setw(4) << drivetrainConfiguration << endl;
     system("pause");
 }
+
+json Drivetrain::editConfiguration(json drivetrainConfiguration) {
+    int i;
+    int flag = 1;
+    int intData;
+    int choice;
+    float floatData;
+    string exit;
+    string editName;
+    string stringData;
+    json drivetrainAttributes;
+    for (auto it = drivetrainConfiguration["children"].begin(); it != drivetrainConfiguration["children"].end(); ++it)
+        drivetrainAttributes.emplace_back(string(it.key()));
+    do {
+        system("cls");
+        cout << "*****Edit Drivetrain Configuration*****\n\n";
+        cout << "Current values:\n";
+        i = 1;
+        for(string options : drivetrainAttributes){
+            cout << i++ << ". " << options << ": "<<drivetrainConfiguration["children"][options]["value"] << "\n";
+        }
+        cout << "Choose a option: ";
+        cin>>choice;
+        editName = drivetrainAttributes[choice-1];
+        if(drivetrainConfiguration["children"][editName]["value"].is_number_integer()) {
+            cout << "Enter the new value: ";
+            cin >> intData;
+            drivetrainConfiguration["children"][editName]["value"] = intData;
+            cout << "\nValue changed\n";
+        }
+        else if(drivetrainConfiguration["children"][editName]["value"].is_string()) {
+            if(drivetrainConfiguration["children"][editName]["hasEnum"] == true) {
+                json options = drivetrainConfiguration["children"][editName]["enum"];
+                i = 1;
+                for(string option : options)
+                    cout << i++ << ". " << option << '\n';
+                cout<<"Choose a option: ";
+                cin>>intData;
+                drivetrainConfiguration["children"][editName]["value"] = options[intData - 1];
+                cout << "\nValue changed\n";
+            }
+            else {
+                cout << "Enter the new value: ";
+                cin >> stringData;
+                drivetrainConfiguration["children"][editName]["value"] = stringData;
+                cout << "\nValue changed\n";
+            }
+        }
+        else if(drivetrainConfiguration["children"][editName]["value"].is_number_float()) {
+            cout << "Enter the new value: ";
+            cin >> floatData;
+            drivetrainConfiguration["children"][editName]["value"] = floatData;
+            cout << "\nValue changed\n";
+        }
+        cout<<"Enter x and return key to exit.. ";
+        cin>>exit;
+        if(exit == "x")
+            flag = 0;
+    }while(flag);
+    return drivetrainConfiguration;
+}

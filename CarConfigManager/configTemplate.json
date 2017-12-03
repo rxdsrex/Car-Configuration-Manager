@@ -5,21 +5,25 @@
             "Model": {
                 "description": "Vehicle model",
                 "value": "",
+                "hasEnum": false,
                 "id": 101
             },
             "WMI": {
                 "description": "3-character World Manufacturer Identification (WMI) as defined by ISO 3780",
                 "value": "",
+                "hasEnum": false,
                 "id": 102
             },
             "VIN": {
                 "description": "17-character Vehicle Identification Number (VIN) as defined by ISO 3779",
                 "value": "",
+                "hasEnum": false,
                 "id": 103
             },
             "Brand": {
                 "description": "Vehicle brand or manufacturer",
                 "value": "",
+                "hasEnum": false,
                 "id": 104
             },
             "Year": {

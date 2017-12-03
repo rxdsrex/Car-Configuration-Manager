@@ -44,3 +44,51 @@ void Body::viewConfiguration(json bodyConfiguration) {
     //cout << setw(4) << bodyConfiguration << endl;
     system("pause");
 }
+
+json Body::editConfiguration(json bodyConfiguration) {
+    int i;
+    int flag = 1;
+    string exit;
+    string editName;
+    int intData;
+    string stringData;
+    int choice;
+    json bodyAttributes;
+    for (auto it = bodyConfiguration["children"].begin(); it != bodyConfiguration["children"].end(); ++it)
+        bodyAttributes.emplace_back(string(it.key()));
+    do {
+        system("cls");
+        cout << "*****Edit Body Configuration*****\n\n";
+        cout << "Current values:\n";
+        i = 1;
+        for(string options : bodyAttributes){
+            cout << i++ << ". " << options << ": "<<bodyConfiguration["children"][options]["value"] << "\n";
+        }
+        cout << "Choose an option: ";
+        cin>>choice;
+        editName = bodyAttributes[choice-1];
+        if(bodyConfiguration["children"][editName]["value"].is_string()) {
+            if(bodyConfiguration["children"][editName]["hasEnum"] == true) {
+                json options = bodyConfiguration["children"][editName]["enum"];
+                i = 1;
+                for(string option : options)
+                    cout << i++ << ". " << option << '\n';
+                cout<<"Choose an option: ";
+                cin>>intData;
+                bodyConfiguration["children"][editName]["value"] = options[intData - 1];
+                cout << "\nValue changed\n";
+            }
+            else {
+                cout << "Enter the new value: ";
+                cin >> stringData;
+                bodyConfiguration["children"][editName]["value"] = stringData;
+                cout << "\nValue changed\n";
+            }
+        }
+        cout<<"Enter x and return key to exit.. ";
+        cin>>exit;
+        if(exit == "x")
+            flag = 0;
+    }while(flag);
+    return bodyConfiguration;
+}
