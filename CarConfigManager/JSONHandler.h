@@ -24,7 +24,6 @@ public:
     JSONHandler(string);
     json readFromFile(string);
     bool writeToFile(json,string);
-    json mapToJSON(jsonMap);
     void addMetadata(string);
     bool editToFile(json,string,string);
     virtual ~JSONHandler();

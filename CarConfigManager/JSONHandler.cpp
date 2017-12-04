@@ -41,12 +41,6 @@ bool JSONHandler::writeToFile(json jsonData,string fileLocation) {
     }
 }
 
-json JSONHandler::mapToJSON(jsonMap mapData) {
-    for(auto i : mapData)
-        jsonData[i.first]=i.second;
-    return jsonData;
-}
-
 void JSONHandler::addMetadata(string carname) {
     string folder = "configurations/";
     string filelocation =  folder.append(carname + ".json");

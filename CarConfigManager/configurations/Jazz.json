@@ -1,0 +1,202 @@
+{
+    "Body": {
+        "children": {
+            "BodyType": {
+                "description": "Body type",
+                "enum": [
+                    "Hatchback",
+                    "Sedan",
+                    "MUV/SUV",
+                    "Coupe",
+                    "Convertible"
+                ],
+                "hasEnum": true,
+                "id": 502,
+                "value": "Hatchback"
+            },
+            "RefuelPosition": {
+                "description": "Location of the fuel cap or charge port",
+                "enum": [
+                    "front_left",
+                    "front_right",
+                    "middle_left",
+                    "middle_right",
+                    "rear_left",
+                    "rear_right"
+                ],
+                "hasEnum": true,
+                "id": 501,
+                "value": "rear_right"
+            }
+        },
+        "description": "Body components"
+    },
+    "Cabin": {
+        "children": {
+            "DoorCount": {
+                "description": "Number of doors in vehicle",
+                "id": 201,
+                "value": 5
+            },
+            "SteeringWheelPosition": {
+                "description": "Position of the steering wheel inside the cabin",
+                "enum": [
+                    "front_left",
+                    "front_right"
+                ],
+                "hasEnum": true,
+                "id": 202,
+                "value": "front_right"
+            }
+        },
+        "description": "In-cabin components, including doors."
+    },
+    "Chassis": {
+        "children": {
+            "CurbWeight": {
+                "description": "Vehicle curb weight, in kg, including all liquids and full tank of fuel, but no cargo or passengers.",
+                "hasUnit": true,
+                "id": 306,
+                "unit": "kg",
+                "value": 1079.0
+            },
+            "GrossWeight": {
+                "description": "Curb weight of vehicle, including all liquids and full tank of fuel and full load of cargo and passengers.",
+                "hasUnit": true,
+                "id": 301,
+                "unit": "kg",
+                "value": 1079.0
+            },
+            "Height": {
+                "description": "Overall vehicle height, in mm.",
+                "hasUnit": true,
+                "id": 303,
+                "unit": "mm",
+                "value": 1524
+            },
+            "Length": {
+                "description": "Overall vehicle length, in mm.",
+                "hasUnit": true,
+                "id": 305,
+                "unit": "mm",
+                "value": 3989
+            },
+            "Wheelbase": {
+                "description": "Overall wheel base, in mm.",
+                "hasUnit": true,
+                "id": 302,
+                "unit": "mm",
+                "value": 2530
+            },
+            "Width": {
+                "description": "Overall vehicle width, in mm.",
+                "hasUnit": true,
+                "id": 304,
+                "unit": "mm",
+                "value": 1694
+            }
+        },
+        "description": "All attributes concerning steering, suspension, wheels, and brakes."
+    },
+    "Drivetrain": {
+        "children": {
+            "Displacement": {
+                "description": "Displacement in cubic centimetres.",
+                "hasUnit": true,
+                "id": 406,
+                "unit": "CC",
+                "value": 1200.0
+            },
+            "DriveType": {
+                "description": "Drive type.",
+                "enum": [
+                    "fwd",
+                    "rwd",
+                    "awd"
+                ],
+                "hasEnum": true,
+                "id": 401,
+                "value": "fwd"
+            },
+            "FuelType": {
+                "description": "Type of fuel that the engine runs on.",
+                "enum": [
+                    "gasoline",
+                    "diesel",
+                    "E85",
+                    "CNG"
+                ],
+                "hasEnum": true,
+                "id": 404,
+                "value": "gasoline"
+            },
+            "GearCount": {
+                "description": "Number of forward gears in the transmission. -1 = CVT.",
+                "id": 403,
+                "value": -1
+            },
+            "MaxPower": {
+                "description": "Peak power, in kilowatts, that engine can generate.",
+                "hasUnit": true,
+                "id": 407,
+                "unit": "kW",
+                "value": 88.0
+            },
+            "MaxTorque": {
+                "description": "Peak power, in newton meter, that the engine can generate.",
+                "hasUnit": true,
+                "id": 405,
+                "unit": "Nm",
+                "value": 145.0
+            },
+            "TransmissionType": {
+                "description": "Transmission type.",
+                "enum": [
+                    "sequential",
+                    "H",
+                    "automatic",
+                    "DSG",
+                    "CVT"
+                ],
+                "hasEnum": true,
+                "id": 402,
+                "value": "CVT"
+            }
+        },
+        "description": "Drivetrain attributes internal combustion engines, transmissions, electric motors, etc."
+    },
+    "Vehicle": {
+        "children": {
+            "Brand": {
+                "description": "Vehicle brand or manufacturer",
+                "hasEnum": false,
+                "id": 104,
+                "value": "HONDA"
+            },
+            "Model": {
+                "description": "Vehicle model",
+                "hasEnum": false,
+                "id": 101,
+                "value": "JAZZ"
+            },
+            "VIN": {
+                "description": "17-character Vehicle Identification Number (VIN) as defined by ISO 3779",
+                "hasEnum": false,
+                "id": 103,
+                "value": "1HG13GH86T68I4GDH"
+            },
+            "WMI": {
+                "description": "3-character World Manufacturer Identification (WMI) as defined by ISO 3780",
+                "hasEnum": false,
+                "id": 102,
+                "value": "MAK"
+            },
+            "Year": {
+                "description": "Model year of the vehicle",
+                "id": 105,
+                "value": 2017
+            }
+        },
+        "description": "Attributes that identify a vehicle"
+    }
+}
